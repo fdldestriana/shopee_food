@@ -24,10 +24,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/buttons/
     - assets/images/categories/
     - assets/images/cards/
     - assets/images/discount/
     - assets/images/foods/
+    - assets/images/restaurant_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

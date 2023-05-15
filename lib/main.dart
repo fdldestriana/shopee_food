@@ -1,4 +1,4 @@
-import 'package:shopee_food/module/main/view/main_view.dart';
+import 'package:shopee_food/module/search_result/view/search_result_view.dart';
 import 'package:shopee_food/state_util.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainView(),
+      home: const SearchResultView(),
     );
   }
 }

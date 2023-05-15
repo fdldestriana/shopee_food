@@ -4,10 +4,11 @@ import 'package:shopee_food/module/main/widget/tag_widget.dart';
 import 'package:shopee_food/utils/color_lib.dart';
 
 class MenuWidget extends StatelessWidget {
-  const MenuWidget({
+  const MenuWidget(
+    this.image, {
     super.key,
   });
-
+  final String image;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,7 +21,7 @@ class MenuWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
-                'assets/images/foods/japanese_noodle.png',
+                image,
                 width: 88,
                 height: 88,
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:shopee_food/utils/color_lib.dart';
+import 'package:shopee_food/module/main/widget/title_widget.dart';
 
 class PromosView extends StatelessWidget {
   PromosView(this.pageController, {super.key});
@@ -15,38 +14,7 @@ class PromosView extends StatelessWidget {
       height: 196,
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Promo & Cashback',
-                style: GoogleFonts.poppins(
-                    color: ColorLib.darkBlack,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  width: 48,
-                  height: 22,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(16, 255, 121, 46),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'See all',
-                      style: GoogleFonts.poppins(
-                          color: ColorLib.primaryColor,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+          const TitleWidget('Promo & Cashback'),
           const SizedBox(height: 16),
           SizedBox(
             width: 335,
