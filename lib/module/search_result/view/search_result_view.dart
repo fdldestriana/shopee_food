@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopee_food/core.dart';
 import 'package:shopee_food/module/main/widget/menu_widget.dart';
+import 'package:shopee_food/module/search_result/widget/category_picker.dart';
 import 'package:shopee_food/utils/color_lib.dart';
 import '../controller/search_result_controller.dart';
 
@@ -38,8 +39,11 @@ class SearchResultView extends StatefulWidget {
               borderRadius: BorderRadius.circular(12)),
           child: const TextField(
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.zero,
-                prefixIcon: Icon(Icons.search)),
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.zero,
+              isDense: true,
+              prefixIcon: Icon(Icons.search),
+            ),
           ),
         ),
         actions: [
@@ -61,6 +65,7 @@ class SearchResultView extends StatefulWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Sort by',
@@ -68,6 +73,10 @@ class SearchResultView extends StatefulWidget {
                           color: ColorLib.darkBlack,
                           fontSize: 12,
                           fontWeight: FontWeight.w500),
+                    ),
+                    ReCategoryPicker(
+                      categories: ['Related', 'Nearest', 'Bestsellers'],
+                      isSelected: false,
                     )
                   ],
                 ),
