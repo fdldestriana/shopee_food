@@ -74,9 +74,8 @@ class SearchResultView extends StatefulWidget {
                           fontSize: 12,
                           fontWeight: FontWeight.w500),
                     ),
-                    ReCategoryPicker(
+                    const ReCategoryPicker(
                       categories: ['Related', 'Nearest', 'Bestsellers'],
-                      isSelected: false,
                     )
                   ],
                 ),
