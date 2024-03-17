@@ -1,4 +1,4 @@
-# shopee_food
+# Shopee Food 🍔🧃
 
 A new Flutter project.
 
